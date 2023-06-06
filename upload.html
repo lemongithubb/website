@@ -118,7 +118,7 @@
 <body>
     <header>
         <h1>
-            <a href="main.html">
+            <a href="index.html">
                 <img src="img/title.png" width="350" height="100" alt="logo" />
             </a>
 
@@ -155,7 +155,7 @@
         </div>
         <div id="image_container"></div>
 
-        <select name="category">
+        <select name="category" onchange="handleOnChange(this)">
             <option value="none">==== 카테고리 ===</option>
             <option value="korean">개</option>
             <option value="english">고양이</option>
@@ -165,7 +165,6 @@
 
         <button type="button" class="btm_event"><img src="img/upload.png" alt="upload" class="btm"
                 onclick="upload();"></button>
-
     </div>
     <script src="js/upload.js"></script>
     <script src="js/basic.js"></script>

@@ -1,14 +1,13 @@
 "use strict";
 
-function getImgFile(){
+let fromData=new FormData();
+var img=new Image();
+var post_list=[];
 
-}
-function upload(){
-    not_make();
-}
+
 function setThumbnail(event){
+
     var reader = new FileReader();
-    
     reader.onload = function(event){
         var img = document.createElement("img");
         img.setAttribute("src", event.target.result);
@@ -17,4 +16,18 @@ function setThumbnail(event){
     };
     
     reader.readAsDataURL(event.target.files[0]);
+   
+   post_list.push(reader);
+
 }
+
+function handleOnchange(e){
+    const text = e.options[e.selectedIndex].text;
+  
+}
+
+function upload(){
+   post_list.push(img);
+   alert("성공");
+}
+ 

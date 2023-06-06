@@ -29,7 +29,7 @@ function goto_login(){
     
 }
 function goto_main(){
-    location.replace("main.html");
+    location.replace("index.html");
 }
 
 function goto_reg(){
