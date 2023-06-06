@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+   
+    <link rel="stylesheet" href="css/font.css">
+    <style>
+        * {
+            text-decoration: none;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        header {
+            display: flex;
+            width: 100vw;
+            height: 100px;
+            background-color: white;
+        }
+
+        header h1 {
+            width: 350px;
+            height: 100px;
+        }
+
+        body {
+            height: 100vh;
+            background: url("img/back.png") no-repeat;
+            background-color: white;
+            background-size: cover;
+        }
+
+        .container {
+            box-sizing: border-box;
+            width: 600px;
+            height: 600px;
+            padding: 60px;
+            background-color: white;
+            margin: auto;
+            margin-top: 100px;
+        }
+
+        .container>h2 {
+            font-size: 60px;
+            color: black;
+            text-align: center;
+            font-family: 'font';
+            margin-bottom: 20px;
+        }
+
+        .textB {
+            font-size: 15px;
+            width: 50%;
+            height: 50px;
+            padding: 0 10px;
+            box-sizing: border-box;
+            margin-left: 125px;
+            margin-top: 30px;
+
+        }
+        .error{
+            font-size: 15px;
+            color: red;
+            margin-left: 125px;
+        }
+
+        .container>button {
+            border: none;
+            background-color: rgba(255, 255, 255, 0);
+            vertical-align: middle;
+
+            float: right;
+            margin-top: 80px;
+        }
+        #go_login_btn{
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>
+            <a href="main.html">
+                <img src="img/title.png" width="350" height="100" alt="logo" />
+            </a>
+
+        </h1>
+    </header>
+    <div class="container">
+        <h2>
+            회원가입
+        </h2>
+        <div class="id">
+            <input type="text" class="textB" id="id" placeholder="아이디" name="userID" maxlength="20">
+            <div id="idError" class="error"></div>
+        </div>
+        <div class="pw">
+            <input type="text" class="textB" id="pw"placeholder="비밀번호" name="userPW" maxlength="20">
+            <div id="pwError" class="error"></div>
+        </div>
+        <div class="pwck">
+            <input type="text" class="textB" id="pwck" placeholder="비밀번호 확인" name="userPW" maxlength="20">
+            <div id="pwckError" class="error"></div>
+        </div>
+        
+        <button type="button" id="reg_btn" onclick="reg();" class="btm_event"><img src="img/reg_k.png" alt="회원가입" class="btm"></button>
+        <button type="button" id="go_login_btn"onclick="goto_login();" class="btm_event"><img src="img/login_k.png" alt="로그인"
+            class="btm"></button>
+    </div>
+    <script src="js/register.js"></script>
+    
+</body> 
+
+</html>

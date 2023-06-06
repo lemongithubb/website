@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사진 올리기</title>
+
+    <link rel="stylesheet" href="css/font.css">
+    <style>
+        * {
+            text-decoration: none;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        header {
+            display: flex;
+            width: 100vw;
+            height: 100px;
+            background-color: white;
+        }
+
+        header h1 {
+            width: 350px;
+            height: 100px;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: flex-end;
+            height: 100px;
+            width: calc(100vw-350px);
+            margin-left: auto;
+
+        }
+
+        .menu>li {
+            height: 77px;
+            display: flex;
+            margin-top: 13px;
+
+
+            margin-left: 5px;
+            float: right;
+        }
+
+        .menu>li>button {
+            border: none;
+            background-color: rgba(255, 255, 255, 0);
+        }
+
+        body {
+            height: 100vh;
+            background: url("img/back.png") no-repeat;
+            background-color: white;
+            background-size: cover;
+        }
+
+        .container {
+            box-sizing: border-box;
+            width: 600px;
+            height: 600px;
+            padding: 60px;
+            background-color: white;
+            margin: auto;
+            margin-top: 100px;
+        }
+
+        .container>h2 {
+            font-size: 60px;
+            color: black;
+            text-align: center;
+            font-family: 'font';
+            margin-bottom: 20px;
+        }
+
+        .textB {
+            font-size: 15px;
+            width: 50%;
+            height: 50px;
+            padding: 0 10px;
+            box-sizing: border-box;
+
+            margin-left: 125px;
+            margin-top: 30px;
+
+        }
+
+        .error {
+            font-size: 15px;
+            color: red;
+            margin-left: 125px;
+        }
+
+        .container>button {
+            margin-top: 20px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0);
+
+            display: flex;
+            margin-left: 168px;
+        }
+
+        .container #imgTag {
+            margin: auto;
+            width: 300px;
+            height: 300px;
+
+        }
+
+        .container#images_container {}
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>
+            <a href="main.html">
+                <img src="img/title.png" width="350" height="100" alt="logo" />
+            </a>
+
+        </h1>
+        <ul class="menu">
+            <li>
+                <button type="button" onclick="not_make();" class="btm_event"><img src="img/category.png" alt="category"
+                        class="btm"></button>
+            </li>
+            <li>
+                <button type="button" onclick="goto_upload();" class="btm_event"><img src="img/upload.png" alt="upload"
+                        class="btm"></button>
+            </li>
+            <li>
+                <button type="button" onclick="not_make();" class="btm_event"><img src="img/delete.png" alt="delete"
+                        class="btm"></button>
+            </li>
+            <li>
+                <button type="button" onclick="goto_main();" class="btm_event"><img src="img/logout.png" alt="logout"
+                        class="btm"></button>
+
+            </li>
+            <li>
+                <button type="button" onclick="goto_login();" class="btm_event"><img src="img/login.png" alt="login"
+                        class="btm"></button>
+
+            </li>
+        </ul>
+    </header>
+    <div class="container">
+        <div class="form-group">
+            <input class="form-control form-control-user" type="file" name="product_image" id="product_image"
+                onchange="setThumbnail(event);">
+        </div>
+        <div id="image_container"></div>
+
+        <select name="category">
+            <option value="none">==== 카테고리 ===</option>
+            <option value="korean">개</option>
+            <option value="english">고양이</option>
+            <option value="chinese">파충류</option>
+            <option value="spanish">물고기</option>
+        </select>
+
+        <button type="button" class="btm_event"><img src="img/upload.png" alt="upload" class="btm"
+                onclick="upload();"></button>
+
+    </div>
+    <script src="js/upload.js"></script>
+    <script src="js/basic.js"></script>
+    
+
+</body>
+
+</html>
