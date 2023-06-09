@@ -6,7 +6,8 @@ var post_list=[];
 
 
 function setThumbnail(event){
-
+ 
+    
     var reader = new FileReader();
     reader.onload = function(event){
         var img = document.createElement("img");

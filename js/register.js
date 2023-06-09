@@ -28,6 +28,7 @@ function reg_input_check() {
     }
 }
 
+
 function reg_pw_check() {
     if (pw.value == pwck.value) { 
         return true;

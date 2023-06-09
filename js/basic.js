@@ -6,8 +6,6 @@ function not_make(){
 }
 
 
-//main
-
 function non_member(){
     alert("멤버 한정 기능입니다. 로그인하세요.");
     
